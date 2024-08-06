@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		
+		
+		
+
+# 文字不可选中与选中整行
+~~~
+<p>你应该可以选中这段文本。</p>
+<p class="unselectable">嘿嘿，你不能选中这段文本！</p>
+<p class="all">点击一次就会选中这段文本。</p>
+~~~
+~~~
+.unselectable { -webkit-user-select: none;user-select: none;} /* 不可选中 */
+.all { -webkit-user-select: all;user-select: all;} /* 选中整行 */
+~~~
+
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

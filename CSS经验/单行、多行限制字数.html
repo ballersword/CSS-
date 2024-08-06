@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		1. 单行限制字数
+		
+		max-width:110px; //设置最大宽度
+		
+		text-overflow:ellipsis; //设置文字移除后使用省略号
+		
+		white-space: nowrap; //设置文字不许溢出
+		
+		> 注意行内元素需要给display inline-block
+		> 
+		~~~
+		span{display: inline-block;max-width:110px;text-overflow:ellipsis;white-space: nowrap;}
+		~~~
+		2. 多行元素css3解决了这个问题，解决方法如下：
+		display:-webkit-box; //将对象作为弹性伸缩盒子模型显示。
+		
+		-webkit-box-orient:vertical; //从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）
+		
+		-webkit-line-clamp:2; //这个属性不是css的规范属性，需要组合上面两个属性，表示显示的行数。
+		
+		最后的css样式如下：
+		
+		~~~
+		span{overflow:hidden; 
+		text-overflow:ellipsis;
+		display:-webkit-box; 
+		-webkit-box-orient:vertical;
+		-webkit-line-clamp:2;}
+		~~~
+		
+		
+	</body>
+</html>

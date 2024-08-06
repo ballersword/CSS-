@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		
+# a 标签嵌套 img 高度bug
+a标签嵌套img标签，结果a标签不能被img标签撑开。    
+
+在控制台中可以看出img的宽度是22*22,a标签的宽度是22*16。     
+
+img标签放在了a标签(inline模型)内部，由于inline不是用来包含内容的，因此这需要将a标签display改为inline-block或者block，a标签就可以包含img标签了，此时会引起新问题
+
+**还有a标签嵌套img标签，a标签比img标签高。**
+
+img标签放在了a标签(inline模型)内部，由于inline不是用来包含内容的，因此这需要将a标签display改为inline-block或者block；
+但是仅仅改变display并不能解决问题，因为img在a中垂直对齐方式也就是vertical-align默认值为baseline，所以img最垂直对齐时是按照a的基线对齐而不是底线；
+该问题产生的关键就是垂直对齐方式，基线与底线间存在空白
+
+解决办法：
+~~~
+a{ display:block; line-height:0px } 
+~~~
+或
+~~~
+a img{display:block;}
+~~~
+/*或者将img和a同时设置高度，但是不能保证自适应*/
+
+> 目前原因未知，但可以消除bug，具体原因有待研究。
+> 因为当时设立浏览器标准的是欧洲，行内元素为了正确的显示带有尾巴的英文字母例如：j、g、y，默认会在底部留空。
+
+		
+		
+		
+	</body>
+</html>

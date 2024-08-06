@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>imgloop 动画</title>
+	</head>
+	<body>
+		
+		<style>
+		*{margin:0;padding:0;}
+		.box-wrapper {width: 500px;overflow: hidden;height:150px;}
+		.box {width: 1000px;overflow: hidden;clear: both;height:150px;}
+		.box img{width:100px;height:150px;background:#ccc;margin:0;display: block;float:left}
+		.img-list,.img-list2,.img-list3 {width: 500px;float: left;overflow: hidden;height:150px}
+		.img-list {animation: imagesLoop 24s linear 1s infinite normal;}
+		.img-list2 {animation: imagesLoop 30s linear 1s infinite normal;}
+		.img-list3 {animation: imagesLoop 26s linear 1s infinite normal;}
+		@keyframes imagesLoop {
+			0% { transform: translateX(0px); }
+			100% { transform: translateX(-100%); }
+		}
+		</style>
+		
+		<div class="box-wrapper">
+			<div class="box box1">
+				<div class="img-list">
+						<img src="assets/images/client-logo/u1.png" alt="">
+						<img src="assets/images/client-logo/u2.png" alt="">
+						<img src="assets/images/client-logo/u3.png" alt="">
+						<img src="assets/images/client-logo/u4.png" alt="">
+						<img src="assets/images/client-logo/u5.png" alt="">
+				</div>
+			</div>
+			<!--
+			<div class="box box2">
+				<div class="img-list">
+						<img src="assets/images/client-logo/u1.png" alt="">
+						<img src="assets/images/client-logo/u2.png" alt="">
+						<img src="assets/images/client-logo/u3.png" alt="">
+						<img src="assets/images/client-logo/u4.png" alt="">
+						<img src="assets/images/client-logo/u5.png" alt="">
+				</div>
+			</div>
+			<div class="box box3">
+				<div class="img-list">
+						<img src="assets/images/client-logo/u1.png" alt="">
+						<img src="assets/images/client-logo/u2.png" alt="">
+						<img src="assets/images/client-logo/u3.png" alt="">
+						<img src="assets/images/client-logo/u4.png" alt="">
+						<img src="assets/images/client-logo/u5.png" alt="">
+				</div>
+			</div>
+			-->
+		</div>
+		
+		<script>
+			/* 配合css弹幕动画 克隆内容插入父级标签 */
+			const clone1 = document.querySelector(".img-list").cloneNode(true);
+			/*const clone2 = document.querySelector(".img-list2").cloneNode(true);
+			const clone3 = document.querySelector(".img-list3").cloneNode(true);*/
+			
+			document.querySelector(".box1").appendChild(clone1);
+			/*document.querySelector(".box2").appendChild(clone2);
+			document.querySelector(".box3").appendChild(clone3);*/
+		</script>	
+		
+		
+		
+	</body>
+</html>

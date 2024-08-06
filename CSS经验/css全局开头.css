@@ -1,0 +1,17 @@
+*{margin: 0;padding: 0;outline: none;-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: PingFang SC,Verdana,Microsoft YaHei;}
+/* 去掉html默认的边距和外边框 */
+html{ font-size:14px;-moz-osx-font-smoothing: grayscale;-webkit-font-smoothing: antialiased;text-rendering: optimizeLegibility;}
+/* 控制全局字体大小 其余字体大小可以也此为基准 用rem设置字体  并且优化文本显示*/
+@font-face { font-family: 'xg'; src:url(Haettenschweiler.TTF); }
+/* 调用外部字体,注意版权 */
+ul,li{ list-style: none;}
+/* 去除列表默认样式 */
+a img{ border: none;}
+/* 防止a标签点击之后 图片出现外边框 */
+a{ text-decoration: none;-moz-transition:all 0.3s ease 0s;-webkit-transition: all 0.3s ease 0s;-o-transition: all 0.3s ease 0s;transition:all 0.3s ease 0s; cursor:pointer; }
+/* 去掉a标签下划线和固有颜色 控制a标签hover优雅过渡 控制a标签手型 */
+@media (max-width: 1400px){ }
+@media (max-width: 1000px){ }
+@media (max-width: 600px){ }
+/* 响应式设计 控制不同宽度下css的不同设计  */
+/* 搭配html页头声明 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">  */

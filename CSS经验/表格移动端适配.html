@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		
+		# 表格在手机端适配
+		表格在手机端适配可采用**data-label**搭配**before**伪元素实现 table 到 list 的转化。
+		
+		data-label标签设置每个td的属性，用来声明此单元格表示什么字段。
+		~~~
+		<table border="0" cellpadding="0" cellspacing="0">
+			<thead>
+			    <tr>
+					<th>序号</th>
+					<th>业务场景</th>
+					<th>收集目的</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td data-label="序号">1</td>
+					<td data-label="业务场景">用户注册</td>
+					<td data-label="收集目的">形成用户登录账号</td>
+				</tr>
+			</tbody>
+		</table>
+		~~~
+		~~~
+		@media (max-width: 600px){ 
+		table {padding: 5px;border:0px;}
+		table thead {display: none;}
+		table tr { margin-bottom:20px;display: block;border: 1px solid #ccc;}
+		table td { display: block;font-size: 14px; border: 0px;border-bottom:1px solid #ccc ;}
+		table td:last-child {border: 0px;}
+		table td:before { content: attr(data-label); float: left; text-transform: uppercase; font-weight: bold;margin: 0 10px 0 0;}
+		}
+		~~~
+		
+		
+		
+	</body>
+</html>

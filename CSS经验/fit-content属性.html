@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div class="color act x">定位居中</div>
+		
+		<style>
+			.color{background: #ccc;}
+			@keyframes tinyUp{
+				from {transform: translateY(5px);}                                                   
+				to {transform: translateY(0);}
+			}
+			.act{animation: tinyUp 1s;}
+			.o{width:300px;height:200px;position: absolute;left: 50%; top: 200px;margin:0 0 0 -150px;}
+			/*传统定位法 必须指定宽度，且无法保证上下居中 不推荐使用*/
+			.o2{width:300px;height:200px;position: absolute;left: 0; top: 0; right: 0;bottom: 0;margin: auto;}
+			/*传统定位法 必须指定宽度 */
+			.o3{position: absolute;left: 50%;top:50%;transform: translate(-50%,50%);}
+			/*传统定位法 不指定宽度 但会占用transform属性 */
+			.x{width:fit-content;height:fit-content;position: absolute;left: 0; top: 0; right: 0;bottom: 0;margin: auto;}
+			/*新定位法，宽度自适应，不占用额外属性*/
+		</style>
+		
+		
+	</body>
+</html>

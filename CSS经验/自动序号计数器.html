@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		
+		
+# 伪类计数器
+伪类自定义增量，实现自动序号。
+> 常用与新闻列表排行。
+~~~
+.albumZone_up_r .list1 a,.albumZone_up_r .list2 a {counter-increment: xx}
+.albumZone_up_r a p::before{content: counter(xx); color: red; display: inline-block; width: 1em; margin-left: -1.5em; margin-right: 0.5em; text-align: right; direction: rtl}
+~~~
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		
+		
+# 横屏显示
+横屏显示 orientation: portrait 
+
+常规显示 orientation: landscape 
+
+1. 横屏翻转样式 transform-origin设置翻转基准点 **transform: rotate(90deg) translateY(-100%)** 翻转90度横屏且复位原始位置。  
+2. 覆盖可见范围100%width:100vh;height:100vw; 
+~~~
+@media screen and  (orientation:  portrait){
+.signzone{transform-origin:top left;  transform: rotate(90deg) translateY(-100%); width:100vh !important;height:100vw !important;}
+}
+~~~
+
+		
+		
+		
+		
+	</body>
+</html>

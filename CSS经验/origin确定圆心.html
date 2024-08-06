@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div class="outer"> 
+		   <div class="point"></div>
+		</div>
+		
+		<style>
+			.outer{width: 100px; height:100px; position: absolute; top:300px; left: 50%;border:1px solid #000;}
+			.point{width: 100px; height:100px; background: #09c;animation: rotate 4s infinite linear;
+			-webkit-transform-origin:200px -50px;}
+			/*  transform-origin 圆心确定以图形的左上角为基础0点 x值正数向右负数向左 y值正值向下负值向上  */
+			@keyframes rotate {
+			  100% { transform: rotate(360deg); }
+			 } 
+		</style>
+		
+	</body>
+</html>
